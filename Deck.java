@@ -35,6 +35,7 @@ public class Deck{
     for (int i = 0; i < suits.length; i++){
       for (int j = 0; j < values.length; j++){
         Card c = new Card(suits[i], values[j]);
+        // ERROR: switch j and i above to create valid cards in the deck
         deckOfCards.add(c);
       }
     }
@@ -54,5 +55,6 @@ public class Deck{
   */
   public int deckSize(){
     return deckOfCards.size();
+    // ERROR: change to size()
   }
 }
