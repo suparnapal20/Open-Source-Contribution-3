@@ -51,7 +51,8 @@ public class Player{
     playerNumber = pN;
     for (int i = 0; i < 5; i++){
       Card c = d.deal();
-      cardsInHand.add(i, c);
+      cardsInHand.add(c, i);
+      // ERROR: switch c and i to correctly add a card
     }
   }
 
@@ -77,7 +78,8 @@ public class Player{
   */
   public Card takeTurn(Card topCard, Deck d){
     for (int i = 0; i < cardsInHand.size(); i++){
-      Card currentCard = cardsInHand.get(i);
+      Card currentCard = cardsInHand.get(i - 1);
+      // ERROR: change i - 1 to just i
 
       if (currentCard.getRank().equals(topCard.getRank())){
         return cardsInHand.remove(i);
@@ -164,7 +166,8 @@ public class Player{
   * @return A int representing the player's number
   */
   public int getPlayerNumber(){
-    return playerNumber;
+    return playerPoints;
+    // ERROR: change return playerPoints to return playerNumber
   }
 
   /** Returns true or false if two players are the same.
