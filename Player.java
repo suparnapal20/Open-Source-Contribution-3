@@ -51,7 +51,7 @@ public class Player{
     playerNumber = pN;
     for (int i = 0; i < 5; i++){
       Card c = d.deal();
-      cardsInHand.add(c, i);
+      cardsInHand.add(i, c);
       // ERROR: switch c and i to correctly add a card
     }
   }
