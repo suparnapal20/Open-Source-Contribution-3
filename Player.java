@@ -78,8 +78,8 @@ public class Player{
   */
   public Card takeTurn(Card topCard, Deck d){
     for (int i = 0; i < cardsInHand.size(); i++){
-      Card currentCard = cardsInHand.get(i - 1);
-      // ERROR: change i - 1 to just i
+      Card currentCard = cardsInHand.get(i);
+      
 
       if (currentCard.getRank().equals(topCard.getRank())){
         return cardsInHand.remove(i);
